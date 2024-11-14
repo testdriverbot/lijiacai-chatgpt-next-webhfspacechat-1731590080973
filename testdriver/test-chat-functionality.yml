@@ -1,0 +1,16 @@
+version: 4.1.20
+steps:
+  - prompt: Focus the browser window.
+    commands: []
+  - prompt: Enter a message in the chat interface.
+    commands:
+      - command: hover-text
+        text: Type a message
+        description: chat input field
+        action: click
+      - command: type
+        text: Hello, this is a test message.
+      - command: hover-text
+        text: Ctrl + Enter to send
+        description: chat input field hint
+        action: click
