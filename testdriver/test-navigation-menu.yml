@@ -1,0 +1,39 @@
+version: 4.1.20
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Click on the navigation menu.
+    commands:
+      - command: hover-image
+        description: three-dot menu icon in the top right corner
+        action: click
+  - prompt: Click on the navigation menu.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-image
+        description: three-dot menu icon in the top right corner
+        action: click
+  - prompt: Click on the navigation menu.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-image
+        description: three-dot menu icon in the top right corner
+        action: click
+  - prompt: Navigate to a different section of the website.
+    commands:
+      - command: hover-text
+        text: New Conversation
+        description: button to start a new conversation
+        action: click
+  - prompt: >-
+      Assert that the navigation works correctly and the page loads.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: >-
+          the page shows "New Conversation" and "Hello! How can I assist you
+          today?"
